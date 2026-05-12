@@ -2,6 +2,7 @@
 
 import LiquidGlass from "@/components/liquid-glass";
 import { useEffect, useState, useRef } from "react";
+import { redirect } from "next/navigate";
 import { Theme } from "@/types/themes";
 import Box from "@/components/box/box";
 import Discord from "@/components/Discord";
@@ -150,11 +151,7 @@ export default function Home() {
   }
 
   if (!theme) {
-    return (
-      <div className="w-screen h-screen flex items-center justify-center bg-black text-white">
-        Nenhum tema encontrado.
-      </div>
-    );
+    redirect('/errorcode?code=500&msg=Theme not founded')
   }
 
   const page = theme.page;
