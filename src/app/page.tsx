@@ -2,7 +2,7 @@
 
 import LiquidGlass from "@/components/liquid-glass";
 import { useEffect, useState, useRef } from "react";
-import { redirect } from "next/navigate";
+import { redirect } from "next/navigation";
 import { Theme } from "@/types/themes";
 import Box from "@/components/box/box";
 import Discord from "@/components/Discord";
